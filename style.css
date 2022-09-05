@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  background-color: #0a1a2b;
+  color: #fff;
+  font-family: "Roboto Mono", monospace;
+}
+
+#preload {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  text-transform: uppercase;
+  background-color: blueviolet;
+  opacity: 100;
+  transition: all 2s;
+}
+
+#header {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background-color: #0a1a2b;
+  line-height: 50px;
+  z-index: 10;
+}
+
+#navigation {
+  display: flex;
+  width: 98%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+#navigation #logo {
+  display: flex;
+}
+#navigation #logo p {
+  padding-left: 5vw;
+}
+#navigation #logo p span {
+  padding-right: 10px;
+}
+#navigation #logo p .fa-solid {
+  font-weight: lighter;
+}
+
+#nav_menu ul {
+  display: flex;
+}
+#nav_menu ul li {
+  padding: 0px 20px;
+}
+#nav_menu ul :last-child {
+  padding-right: 0px;
+}
+#toggle {
+  display: none;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+#toggle::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 20px;
+  background-color: #fff;
+  top: 5px;
+}
+#toggle::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  background-color: #fff;
+  bottom: 4px;
+}
+
+#main {
+  display: flex;
+  box-sizing: content-box;
+}
+#main #aside {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  width: 10%;
+  height: calc(100vh - 50px);
+}
+#main #aside #social_media ul {
+  display: block;
+}
+#main #aside #social_media ul li {
+  padding: 5vh 3vw;
+}
+#main #aside #social_media ul li a {
+  font-size: 2vw;
+}
+#main #article {
+  margin-top: 30px;
+  margin-left: 10%;
+  width: 90%;
+}
+#main #article #article_content {
+  display: block;
+  box-sizing: border-box;
+}
+#main #article .skill_container, #main #article .education_container {
+  display: block;
+  width: 100%;
+}
+#main #article #hero {
+  width: 100%;
+  padding-bottom: 20px;
+}
+#main #article #hero_content {
+  display: flex;
+  align-items: center;
+}
+#main #article #hero_content h2 {
+  margin-bottom: 20px;
+}
+#main #article #hero_left {
+  display: block;
+}
+#main #article #hero_right {
+  min-width: 50%;
+}
+#main #article #hero_right img {
+  display: block;
+  width: 100%;
+}
+#main #article #education {
+  padding-top: 50px;
+  width: 100%;
+  min-height: 100vh;
+}
+#main #article #education .design {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#main #article #education .design .round {
+  background: orange;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-left: -10px;
+}
+#main #article #education .design .line {
+  margin-left: -2px;
+  background: orange;
+  width: 140px;
+  height: 3px;
+  border-radius: 2px;
+}
+#main #article #skills {
+  padding-top: 50px;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+#main #article #skills .design {
+  display: flex;
+  align-items: center;
+  margin-top: 14px;
+  margin-bottom: 15px;
+}
+#main #article #skills .design .round {
+  background: orange;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-left: -10px;
+}
+#main #article #skills .design .line {
+  margin-left: -2px;
+  background: orange;
+  width: 140px;
+  height: 3px;
+  border-radius: 2px;
+}
+#main #article #skills #skills_content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#main #article #skills #skills_content .javascript .skill_progress {
+  width: 60%;
+}
+#main #article #skills #skills_content .html .skill_progress {
+  width: 80%;
+}
+#main #article #skills #skills_content .css .skill_progress {
+  width: 70%;
+}
+#main #article #skills #skills_content .scss .skill_progress {
+  width: 50%;
+}
+#main #article #skills #skills_content .git .skill_progress {
+  width: 60%;
+}
+#main #article #skills #skills_content .bootstrap .skill_progress {
+  width: 50%;
+}
+#main #article #skills #skills_content .skill_element_container {
+  margin: 20px 0px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 330px;
+  align-items: center;
+}
+#main #article #skills #skills_content .skill_element_container .skill_progressbar {
+  width: 200px;
+  height: 4px;
+  background-color: #23374d;
+}
+#main #article #skills #skills_content .skill_element_container .skill_progressbar .skill_progress {
+  height: 4px;
+  background-color: #8190a1;
+}
+#main #article #skills #skills_content .skill_element_container .skill_percentage {
+  position: absolute;
+  top: -15px;
+  right: 0px;
+}
+#main #article #work {
+  padding-top: 50px;
+  width: 100%;
+}
+#main #article #work .design {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#main #article #work .design .round {
+  background: orange;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-left: -10px;
+}
+#main #article #work .design .line {
+  margin-left: -2px;
+  background: orange;
+  width: 140px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+@media only screen and (max-width: 600px) {
+  #nav_menu ul {
+    display: none;
+  }
+  #toggle {
+    display: block;
+  }
+}/*# sourceMappingURL=style.css.map */
